@@ -14,13 +14,14 @@ export const heroBannerData: HeroBannerData = {
     {
       text: "Register Interest",
       action: "register-interest",
-      variant: "secondary",
+      variant: "primary",
     },
   ],
   images: {
-    leftBackground: "/images/leftSide.png",
+    colorLayers: "/images/colorLayers.png",
+    mobileColorLayers: "/images/mobileColorLayers.png",
     centerLogo: "/images/middleTrophyText.png",
-    rightPlayers: "/images/rightSide.png",
-    fullBackground: "/images/fullBackground.png",
+    players: "/images/players.png",
+    mobilePlayers: "/images/mobilePlayers.png",
   },
 };

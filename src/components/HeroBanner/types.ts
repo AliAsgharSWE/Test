@@ -1,26 +1,18 @@
-export interface HeroBannerButton {
-  text: string;
-  action: string;
-  variant?: "primary" | "secondary";
-}
-
-export interface HeroBannerImages {
-  leftBackground: string;
-  centerLogo: string;
-  rightPlayers: string;
-  fullBackground?: string;
-}
-
+// types.ts
 export interface HeroBannerData {
   title: string;
   subtitle: string;
   description: string;
-  buttons: HeroBannerButton[];
-  images: HeroBannerImages;
-}
-
-export interface HeroBannerProps {
-  data?: HeroBannerData;
-  className?: string;
-  onButtonClick?: (action: string) => void;
+  buttons: {
+    text: string;
+    action: string;
+    variant: "primary" | "secondary";
+  }[];
+  images: {
+    colorLayers: string;
+    centerLogo: string;
+    players: string;
+    mobileColorLayers: string;
+    mobilePlayers: string;
+  };
 }
