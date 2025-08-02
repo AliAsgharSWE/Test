@@ -21,6 +21,7 @@ export const heroBannerData: HeroBannerData = {
     colorLayers: "/images/colorLayers.png",
     mobileColorLayers: "/images/mobileColorLayers.png",
     centerLogo: "/images/middleTrophyText.png",
+    mobileCenterLogo: "/images/mobileMiddleTrophyText.png",
     players: "/images/players.png",
     mobilePlayers: "/images/mobilePlayers.png",
   },

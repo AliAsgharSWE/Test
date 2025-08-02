@@ -12,6 +12,7 @@ export interface HeroBannerData {
     colorLayers: string;
     centerLogo: string;
     players: string;
+    mobileCenterLogo: string;
     mobileColorLayers: string;
     mobilePlayers: string;
   };
