@@ -70,12 +70,12 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ data }) => {
             <div className="flex-1 px-4 flex justify-center items-center pt-0 mobile-xs:px-3 mobile-sm:px-4 mobile-md:px-5 mobile-lg:px-6">
               <div className="max-w-2xl flex flex-col items-start justify-center space-y-4 my-auto text-start tablet:-ml-24">
                 {/* Main Title */}
-                <h1 className="text-white font-bold leading-tight mb-1 mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl">
+                <h1 className="text-white font-bold leading-tight mb-1 mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl desktop-lg:text-7xl">
                   {data.title}
                 </h1>
 
                 {/* Subtitle with White Color */}
-                <h2 className="text-white font-bold leading-tight mb-3 tablet:mb-4 mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl">
+                <h2 className="text-white font-bold leading-tight mb-3 tablet:mb-4 mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl desktop-lg:text-6xl">
                   {data.subtitle}
                 </h2>
 
