@@ -92,7 +92,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ data }) => {
                       onClick={() => handleButtonClick(button.action)}
                       className={`
                         flex-1 font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg
-                        mobile-xs:px-2 mobile-xs:py-1 mobile-sm:px-3 mobile-sm:py-2 mobile-md:px-4 mobile-md:py-2 mobile-lg:px-5 mobile-lg:py-3 mobile-xs:text-xs mobile-sm:text-sm mobile-md:text-base
+                        mobile-xs:px-2 mobile-xs:py-1 mobile-sm:px-3 mobile-sm:py-2 mobile-md:px-4 mobile-md:py-2 mobile-lg:px-5 mobile-lg:py-3 mobile-xs:text-xs mobile-sm:text-sm mobile-md:text-base                         
                         ${
                           button.variant === "primary"
                             ? "bg-black hover:bg-gray-800 text-white border-2 border-black hover:border-gray-800"
@@ -211,7 +211,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ data }) => {
             </div>
 
             {/* FIFA Trophy Logo - Desktop */}
-            <div className="absolute top-[10%] start-[40%]  z-30 flex items-center justify-center bg-transparent">
+            <div className="absolute top-[10%] start-[40%] 4k:start-[43%]  z-30 flex items-center justify-center bg-transparent">
               <div>
                 <div className="relative laptop:w-52 laptop:h-52 desktop:w-80 desktop:h-80">
                   <Image
