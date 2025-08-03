@@ -1,5 +1,6 @@
 import React from "react";
 import { TextContentProps } from "./types";
+
 const TextContent: React.FC<TextContentProps> = ({
   title,
   subtitle,
@@ -7,15 +8,17 @@ const TextContent: React.FC<TextContentProps> = ({
   isMobile,
 }) => (
   <div
-    className={`max-w-2xl flex flex-col items-start justify-center space-y-4 ${
-      isMobile ? "my-auto text-start tablet:-ml-24" : "md:ps-8 text-start"
+    className={`w-full flex flex-col justify-center space-y-4 ${
+      isMobile
+        ? "my-auto text-start tablet:text-start tablet:items-center"
+        : "md:ps-8 text-start"
     }`}
   >
     <h1
       className={`text-white font-bold leading-tight mb-1 ${
         isMobile
-          ? "mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl desktop-lg:text-7xl"
-          : "laptop:text-4xl laptop-lg:text-5xl"
+          ? "mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl tablet:text-5xl tablet:w-full desktop-lg:text-7xl 4k:text-8xl"
+          : "laptop:text-4xl laptop-lg:text-5xl desktop-lg:text-7xl 4k:text-8xl"
       }`}
     >
       {title}
@@ -23,17 +26,17 @@ const TextContent: React.FC<TextContentProps> = ({
     <h2
       className={`text-white font-bold leading-tight mb-3 ${
         isMobile
-          ? "mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl desktop-lg:text-6xl tablet:mb-4"
-          : "laptop:text-4xl laptop-lg:text-5xl mb-1"
+          ? "mobile-xs:text-xl mobile-sm:text-2xl mobile-md:text-3xl mobile-lg:text-4xl mobile-xl:text-5xl tablet:text-5xl tablet:w-full desktop-lg:text-7xl 4k:text-8xl"
+          : "laptop:text-4xl laptop-lg:text-5xl desktop-lg:text-7xl 4k:text-8xl"
       }`}
     >
       {subtitle}
     </h2>
     <p
-      className={`text-white leading-relaxed ${
+      className={`text-white leading-relaxed w-full laptop:w-10/12 text-justify ${
         isMobile
-          ? "mb-4 tablet:mb-6 max-w-lg opacity-95 mobile-xs:text-xs mobile-sm:text-sm mobile-md:text-base mobile-lg:text-lg"
-          : "mb-4 laptop:mb-8 md:max-w-sm xl:max-w-md opacity-95 laptop:text-base laptop-lg:text-lg laptop-xl:text-xl desktop:text-2xld"
+          ? "mb-4 tablet:mb-6 opacity-95 mobile-xs:text-base xl:text-3xl"
+          : "mb-4 laptop:mb-8 md:max-w-1/2 opacity-95 laptop:text-lg laptop-lg:text-xl laptop-xl:text-2xl desktop:text-3xl 4k:text-4xl"
       }`}
     >
       {description}

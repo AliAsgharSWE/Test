@@ -25,15 +25,13 @@ const poppins = Poppins({
 
 const DOMAIN =
   env.DOMAIN ||
-  (env.RAILWAY_PUBLIC_DOMAIN
-    ? `https://${env.RAILWAY_PUBLIC_DOMAIN}`
-    : undefined);
+  (env.PUBLIC_DOMAIN ? `https://${env.PUBLIC_DOMAIN}` : undefined);
 
 export const metadata: Metadata = {
   metadataBase: DOMAIN ? new URL(DOMAIN) : undefined,
   title: {
     default: routes.HOME.metaTitle,
-    template: "%s | Algotix AI",
+    template: "%s | Fifa World Cup 2026I",
   },
   description: routes.HOME.description,
   openGraph: {
@@ -81,7 +79,11 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <meta property="og:image" content={`${DOMAIN}${routes.HOME.ogImage}`} />

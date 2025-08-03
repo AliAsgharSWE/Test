@@ -1,18 +1,18 @@
 export const routes = {
   HOME: {
-    title: "Test - Cutting-Edge Software Development & AI Solutions",
+    title: "Fifa World Cup 2026",
     path: "/",
-    metaTitle: "Test: Cutting-Edge Software Development & AI Solutions",
+    metaTitle: "Fifa World Cup 2026 - Game On!",
     description:
-      "Test offers innovative software development services and AI solutions to drive digital transformation for businesses.",
-    ogImage: "/images/homepage/opengraph-image.png",
+      "Join the excitement of the Fifa World Cup 2026 with live updates, team stats, and more. Get ready for the biggest sporting event of the year!",
+    ogImage: "/images/OG/opengraph-image.png",
 
     twitter: {
       card: "summary_large_image",
-      title: "Test: Cutting-Edge Software Development & AI Solutions",
+      title: "Fifa World Cup 2026 - Game On!",
       description:
-        "Test provides AI-driven software development and digital transformation services for businesses worldwide.",
-      image: "/images/homepage/twitter-image.png",
+        "Join the excitement of the Fifa World Cup 2026 with live updates, team stats, and more. Get ready for the biggest sporting event of the year!",
+      image: "/images/OG/twitter-image.png",
     },
   },
 } as const;
