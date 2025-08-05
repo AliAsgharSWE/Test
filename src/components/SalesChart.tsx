@@ -1,31 +1,29 @@
+// components/SalesChart.tsx
+import React from "react";
 import { QuarterlySales } from "../containers/home/types";
 import { formatCurrency } from "../utils/formatCurrency";
 
-// Sales Chart Component
 export const SalesChart: React.FC<{ data: QuarterlySales[] }> = ({ data }) => {
-  const maxValue = Math.max(...data.map(d => d.sales));
+  const maxValue = Math.max(...data.map((d) => d.sales));
   const totalSales = data.reduce((sum, quarter) => sum + quarter.sales, 0);
 
   return (
-    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-      <div className="mb-6">
-        <h3 className="text-sm font-medium text-gray-800">Quarterly Sales</h3>
-        <div className="text-3xl font-semibold text-gray-900 mt-1">{formatCurrency(totalSales)}</div>
-        <div className="text-sm text-green-600 mt-1">Last Quarter +15%</div>
+    <div className="bg-white p-6 rounded-lg border border-[#E5EAF1] shadow-sm w-full">
+      <div className="mb-8">
+        <h3 className="text-sm font-medium text-[#111827] mb-2">Quarterly Sales</h3>
+        <div className="text-[28px] font-bold text-[#111827]">{formatCurrency(totalSales)}</div>
+        <div className="text-sm  mt-1">Last Quarter<span className="text-[#16A34A]">+15%</span></div>
       </div>
 
-      <div className="flex items-end justify-between h-32 mb-4">
+      <div className="flex items-end justify-between h-40 mb-4 gap-8">
         {data.map((item) => (
-          <div
-            key={item.quarter}
-            className="flex flex-col items-center"
-            style={{ width: "60px" }}
-          >
+          <div key={item.quarter} className="flex flex-col items-center flex-1 text--blue-600">
             <div
-              className="w-full bg-gray-200 rounded-sm mb-2 hover:bg-gray-300 transition-all duration-300"
+              className="w-full bg-[#E5E7EB] rounded-sm transition-all hover:bg-[#D1D5DB]"
               style={{
-                height: `${(item.sales / maxValue) * 100}%`,
-                minHeight: "8px",
+                height: `${(item.sales / maxValue) * 120}px`,
+                minHeight: '8px',
+                maxWidth: '20px'
               }}
               title={`${item.quarter}: ${formatCurrency(item.sales)}`}
             />
@@ -33,9 +31,9 @@ export const SalesChart: React.FC<{ data: QuarterlySales[] }> = ({ data }) => {
         ))}
       </div>
 
-      <div className="flex justify-between text-sm text-gray-500">
+      <div className="flex justify-between text-xs text-[#6B7280] gap-8">
         {data.map((item) => (
-          <div key={item.quarter} className="text-center" style={{ width: '60px' }}>
+          <div key={item.quarter} className="text-center flex-1" style={{ maxWidth: '80px' }}>
             {item.quarter}
           </div>
         ))}
@@ -43,5 +41,3 @@ export const SalesChart: React.FC<{ data: QuarterlySales[] }> = ({ data }) => {
     </div>
   );
 };
-
-
