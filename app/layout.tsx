@@ -4,7 +4,6 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import { env } from "process";
 import { routes } from "@/src/constants/routes";
-import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,16 +89,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
-        <NextTopLoader
-          showSpinner={false}
-          color="#FE5A01"
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={4}
-          crawl={true}
-          easing="ease"
-          speed={100}
-        />
         {children}
       </body>
     </html>

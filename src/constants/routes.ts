@@ -1,18 +1,18 @@
 export const routes = {
   HOME: {
-    title: "Fifa World Cup 2026",
+    title: "Test",
     path: "/",
-    metaTitle: "Fifa World Cup 2026 - Game On!",
+    metaTitle: "Test - Testing Project",
     description:
-      "Join the excitement of the Fifa World Cup 2026 with live updates, team stats, and more. Get ready for the biggest sporting event of the year!",
-    ogImage: "/images/OG/opengraph-image.png",
+      "Welcome to the Test project! Explore the latest updates, news, and features.",
+    ogImage: "/images/OG/test.png",
 
     twitter: {
       card: "summary_large_image",
-      title: "Fifa World Cup 2026 - Game On!",
+      title: "Test - Game On!",
       description:
-        "Join the excitement of the Fifa World Cup 2026 with live updates, team stats, and more. Get ready for the biggest sporting event of the year!",
-      image: "/images/OG/twitter-image.png",
+        "Join us in the Test project for exciting updates and features.",
+      image: "/images/OG/test.png",
     },
   },
 } as const;
